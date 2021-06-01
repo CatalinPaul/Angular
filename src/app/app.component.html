@@ -1,0 +1,48 @@
+
+<div class="text">
+  <h1>TazzList Manager</h1>      
+  <p>Pentru cea mai buna experienta la cumparaturi.</p>
+  </div>
+
+<div class="content">
+ 
+   <div>
+  <input type="text" placeholder="denumire produs"  #newElementLabel />
+  <input type="text"  placeholder="cantitatea" #newElementQuantity />
+  <button (click)="add(newElementLabel.value, newElementQuantity.value);newElementLabel.value=''; newElementQuantity.value='';" >adauga</button>   
+
+
+ </div>
+    
+  
+  <table class="text">
+  
+    <tr>
+      <th>#</th>
+      <th>Nume produs</th>
+      <th>Cantitate</th>
+      <th>Stare</th>
+      <th>Anuleaza</th>
+      <th>Bifeaza</th>
+
+    </tr>
+   
+    <tr *ngFor="let element of tazzlist">
+      <td>{{element.id}}</td>
+      <td>{{element.label}}</td> 
+      <td>{{element.quantity}}</td>
+      <td>{{element.done ? '&#9989;' : '&#10060;'}}</td>
+      <td ><button (click)="delete(element)">sterge</button></td> 
+      <td ><button (click)="done(element)">achizitionat</button></td> 
+    </tr>
+  
+  </table>
+
+  <div class="message"> {{view() ? " " : "Lista dumneavoastra de cumparaturi este goala"}}</div>
+
+  
+</div>
+
+
+
+

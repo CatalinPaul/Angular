@@ -1,0 +1,53 @@
+$myColor1: #141414;
+$myColor2: #FF00FF;
+$myColor3: #FAFAFA;
+
+
+.text{
+text-align: center;
+color: $myColor3;
+font-size: 25px;
+}
+
+
+
+
+.content{
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 60px; 
+}
+
+td {
+    padding: 8px;
+    background-color: $myColor1;
+    color: $myColor3;
+    font-size: 20px;
+}
+
+th {
+    padding: 8px;
+    background-color: $myColor2;
+    color: $myColor3;
+    font-size: 25px;
+    
+}
+
+input{
+    height: 32px;
+    width: 250px;
+    margin-right: 1px;
+    margin-bottom: 10px;
+}
+
+button{
+    height: 38px;
+    width: 250px;
+    font-weight: bold;
+}
+
+.message{
+    margin-top: 30px;
+    @extend .text;
+}
